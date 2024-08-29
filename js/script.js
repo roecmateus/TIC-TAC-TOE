@@ -9,14 +9,17 @@ let secondPlayer;
 let symbol1 = document.querySelector("#symbol-x");
 let symbol2 = document.querySelector("#symbol-o");
 let checkSymbol;
+let computerSymbol;
 
 symbol1.addEventListener("click", () => {
   checkSymbol = true;
+  computerSymbol = "o";
   document.querySelector(".symbol-selector").classList.add("hide");
 });
 
 symbol2.addEventListener("click", () => {
   checkSymbol = false;
+  computerSymbol = "x";
   document.querySelector(".symbol-selector").classList.add("hide");
 });
 
@@ -292,7 +295,8 @@ function declareWinner(winner) {
 
 // EXECUTAR A LÓGICA DA JOGADA DO CPU
 function computerPlay() {
-  let cloneO = o.cloneNode(true);
+  let cloneSymbol =
+    computerSymbol === "x" ? x.cloneNode(true) : o.cloneNode(true);
   counter = 0;
   filled = 0;
 
@@ -302,7 +306,7 @@ function computerPlay() {
     //   SÓ PREENCHER SE ESTIVER VAZIO O FILHO
     if (boxes[i].childNodes[0] == undefined) {
       if (randomNumber <= 1) {
-        boxes[i].appendChild(cloneO);
+        boxes[i].appendChild(cloneSymbol);
         counter++;
         break;
       }
