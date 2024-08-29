@@ -1,0 +1,202 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body,
+html {
+  height: 100%;
+}
+body {
+  text-align: center;
+  font-family: helvetica, sans-serif;
+}
+
+h1.title {
+  margin-top: 180px;
+}
+
+h1 {
+  font-size: 45px;
+}
+
+.symbol-selector {
+  width: 100%;
+  position: absolute;
+  background-color: white;
+  height: 100%;
+}
+.symbol-selector h1 {
+  margin-top: 200px;
+}
+
+.symbol-selector.hide {
+  display: none;
+}
+
+/* BOTÕES */
+
+.button-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#symbol-x {
+  border: none;
+  height: 40px;
+  width: 40px;
+  margin: 0 10px;
+  background-color: #c5c5c5;
+  color: purple;
+  margin-right: 3px;
+  font-weight: bold;
+  margin-top: 30px;
+  font-size: 25px;
+  position: relative;
+}
+
+#symbol-o {
+  border: none;
+  height: 40px;
+  width: 40px;
+  margin: 0 10px;
+  background-color: #c5c5c5;
+  color: yellow;
+  margin-right: 4px;
+  font-weight: bold;
+  margin-top: 30px;
+  font-size: 25px;
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#symbol-o > div {
+  width: 23px;
+  height: 23px;
+  border: 3px solid yellow;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+#buttons-container button {
+  border: none;
+  padding: 10px 15px;
+  margin: 0 10px;
+  background-color: #c5c5c5;
+}
+
+/* JOGO */
+
+#container {
+  display: flex;
+  width: 300px;
+  margin: 0;
+  flex-direction: row;
+  flex-wrap: wrap;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.box {
+  height: 100px;
+  border: 5px solid #000;
+  box-sizing: border-box;
+  flex: 1 1 33%;
+}
+
+#block-1,
+#block-2,
+#block-3 {
+  border-top: none;
+}
+
+#block-1,
+#block-4,
+#block-7 {
+  border-left: none;
+}
+
+#block-7,
+#block-8,
+#block-9 {
+  border-bottom: none;
+}
+
+#block-3,
+#block-6,
+#block-9 {
+  border-right: none;
+}
+
+/* SIMBOLOS */
+
+.x {
+  font-size: 65px;
+  color: purple;
+  display: inline-block;
+  line-height: 100px;
+}
+
+.o {
+  width: 60px;
+  height: 60px;
+  border: 5.5px solid yellow;
+  border-radius: 50%;
+  display: inline-block;
+  margin-top: 17px;
+}
+
+/* CLASSE DE ESCONDER */
+
+.hide {
+  display: none !important;
+}
+
+/* PLACAR */
+
+#scoreboard-container {
+  font-weight: bold;
+  margin-top: 30px;
+  font-size: 25px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.score-box {
+  margin: 0 20px;
+}
+
+#x-scoreboard {
+  color: purple;
+  margin-right: 3px;
+}
+
+#o-scoreboard {
+  display: inline-block;
+  width: 23px;
+  height: 23px;
+  border: 3.5px solid yellow;
+  border-radius: 50%;
+}
+
+/* MSG DE VITÓRIA */
+
+#message p {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  top: 150px;
+  width: 500px;
+  font-size: 50px;
+  background-color: #000000c9;
+  color: white;
+  padding: 20px;
+}
